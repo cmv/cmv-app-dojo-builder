@@ -45,6 +45,20 @@ If you have [Python](https://www.python.org/) you can run `python -m SimpleHTTPS
 2. Another option is to have one main layer `dojo/dojo.js` and several others like config files that are loaded on demand.
 3. When adding layer files, both `build.profile.js` and `Gruntfile.js` clean task should be modified. Otherwise grunt will remove the file when it cleans up the build.
 
+## Limitations
+
+The dojo build system doesn't optimize packages between layers. Lets say you have 3 modules
+
+ * Module A
+ * Module B
+ * Module C
+
+1. Both A and B require C.
+2. We create 2 layer files A and B.
+3. Both layer files will have **their own** copy of C.
+
+Maybe we should move away from dojo and use something like [StealJS](http://stealjs.com). What do you say, Esri?
+
 ##Troubleshooting
 
 Instead of running grunt `dojo-build`, instead try running `build-viewer.sh`. This will give you a detailed error log in the dist directory called `build-report.txt`. Errors begin with error(123) in the output. These errors will most likely be paths that do not resolve correctly.

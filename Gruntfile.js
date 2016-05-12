@@ -32,14 +32,29 @@ module.exports = function (grunt) {
       },
       afterbuild: {
         src: [
+
+          //lets delete everything!
           'dist/**/*',
-          '!dist/**/index.html',
-          '!dist/**/build-report.txt',
-          '!dist/**/app/config/**/*.js',
-          '!dist/**/app/css/**',
+
+          //...except a few things
+          '!dist/index.html',
+
+          //dojo built layers and css files
+          //include other layers, or they'll be deleted
+          '!dist/dojo/dojo.js',
+          '!dist/app/css/build.css',
+
+
+          //the build output in case something goes wrong
+          '!dist/build-report.txt',
+
+          //any additional configs
+          //'!dist/**/app/config/**/*.js',
+
+          //images, resources, and source maps
+          '!dist/**/fonts/**',
           '!dist/**/images/**',
           '!dist/**/resources/**',
-          '!dist/**/dojo/dojo.js',
           '!dist/**/*.js.map'
         ],
         filter: 'isFile'

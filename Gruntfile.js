@@ -80,7 +80,7 @@ module.exports = function (grunt) {
     }
   });
 
-  grunt.registerTask('build', ['clean:build', 'dojo', 'copy', 'clean:afterbuild', 'clean:emptydir']);
   grunt.registerTask('build-dev', ['clean:build', 'dojo', 'copy']);
+  grunt.registerTask('build', ['clean:build', 'dojo', 'copy', 'clean:afterbuild', 'clean:emptydir']);
 
 };

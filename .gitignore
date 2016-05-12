@@ -1,0 +1,18 @@
+#bower installs
+src/cmv/*
+src/dgrid/*
+src/dijit/*
+src/dojo/*
+src/dojox/*
+src/dstore/*
+src/esri/*
+src/moment/*
+src/proj4js/*
+src/put-selector/*
+src/util/*
+src/xstyle/*
+
+
+
+dist
+node_modules

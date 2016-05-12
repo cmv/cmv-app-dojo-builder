@@ -46,7 +46,7 @@ var profile = {
     // 'app' is a sample path for your application
     // set this accordingly
     'app',
-    'cmv', 
+    'cmv',
     'dijit',
     'dojo',
     'dojox',
@@ -195,4 +195,8 @@ var profile = {
       main: 'moment'
     }]
   }
+  //need to update xstyle or something
+  // plugins: {
+  //   'xstyle/css': 'xstyle/build/amd-css'
+  // }
 };

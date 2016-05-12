@@ -85,7 +85,7 @@ var profile = {
   // The default selector engine is not included by default in a dojo.js build in order to make mobile builds
   // smaller. We add it back here to avoid that extra HTTP request. There is also an "acme" selector available; if
   // you use that, you will need to set the `selectorEngine` property in index.html, too.
-  selectorEngine: 'acme',
+  selectorEngine: 'lite',
 
   // Any module in an application can be converted into a "layer" module, which consists of the original module +
   // additional dependencies built into the same file. Using layers allows applications to reduce the number of HTTP
@@ -98,8 +98,6 @@ var profile = {
     'dojo/dojo': {
 
       //put all styles in the build.css bundle
-      //TODO: This isn't working yet. We need to include the build plugin
-      //first
       targetStylesheet: 'app/css/build.css',
 
       // By default, the build system will try to include `dojo/main` in the built `dojo/dojo` layer, which adds
@@ -119,11 +117,7 @@ var profile = {
         'dojox/gfx/filters',
         'dojox/gfx/svgext',
         'dojox/gfx/shape',
-        'esri/dijit/Attribution',
-
-        //css module loader
-        'xstyle/css',
-        'xstyle/load-css'
+        'esri/dijit/Attribution'
       ],
 
       // You can define the locale for your application if you like
@@ -194,9 +188,9 @@ var profile = {
       location: 'moment',
       main: 'moment'
     }]
+  },
+  //plugin required for building css
+  plugins: {
+    'xstyle/css': 'xstyle/build/amd-css'
   }
-  //need to update xstyle or something
-  // plugins: {
-  //   'xstyle/css': 'xstyle/build/amd-css'
-  // }
 };

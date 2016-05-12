@@ -24,6 +24,10 @@ define([
     'gis/dijit/LayerControl/controls/Feature',
 
     //esri modules
+    'esri/dijit/HomeButton',
+    'esri/dijit/OverviewMap',
+    'esri/dijit/Scalebar',
+    'esri/SnappingManager',
 
     //cmv widgets
     'gis/dijit/Growler',

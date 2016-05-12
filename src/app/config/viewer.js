@@ -4,7 +4,42 @@ define([
     'esri/config',
     /*'esri/urlUtils',*/
     'esri/tasks/GeometryService',
-    'esri/layers/ImageParameters'
+    'esri/layers/ImageParameters',
+
+    // many modules are require'd on demand by the controller, so
+    // if we want them included in our dojo build, we specify them here so
+    // they are recognized and included
+
+    // configs
+    'app/config/bookmarks',
+    'app/config/find',
+    'app/config/identify',
+    'app/config/basemaps',
+
+    //layers and layer controllers
+    'esri/layers/FeatureLayer',
+    'esri/layers/ArcGISDynamicMapServiceLayer',
+    'gis/dijit/LayerControl',
+    'gis/dijit/LayerControl/controls/Dynamic',
+    'gis/dijit/LayerControl/controls/Feature',
+
+    //esri modules
+
+    //cmv widgets
+    'gis/dijit/Growler',
+    'gis/dijit/Basemaps',
+    'gis/dijit/Help',
+    'gis/dijit/Bookmarks',
+    'gis/dijit/Find',
+    'gis/dijit/Identify',
+    'gis/dijit/Draw',
+    'gis/dijit/Measurement',
+    'gis/dijit/Print',
+    'gis/dijit/Directions',
+    'gis/dijit/Editor',
+    'gis/dijit/StreetView',
+    'gis/dijit/LocateButton'
+
 ], function (units, Extent, esriConfig, /*urlUtils,*/ GeometryService, ImageParameters) {
 
     // url to your proxy page, must be on same machine hosting you app. See proxy folder for readme.

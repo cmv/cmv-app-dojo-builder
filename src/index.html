@@ -49,13 +49,12 @@
       map: {
         '*': {
           'viewer': 'cmv/viewer/js/viewer',
-          'gis': 'cmv/viewer/js/gis'
+          'gis': 'cmv/viewer/js/gis',
+          'proj4js': 'app/vendor'
         }
       },
-      packages: ['cmv', {
-          name: 'proj4js',
-          location: 'proj4js/dist'
-        },
+      packages: [
+        'cmv',
         'dgrid',
         'dijit',
         'dojo',

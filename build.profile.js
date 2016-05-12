@@ -35,7 +35,8 @@ var profile = {
   map: {
     '*': {
       'viewer': 'cmv/viewer/js/viewer',
-      'gis': 'cmv/viewer/js/gis'
+      'gis': 'cmv/viewer/js/gis',
+      'proj4js': 'app/vendor'
     }
   },
 
@@ -45,10 +46,7 @@ var profile = {
     // 'app' is a sample path for your application
     // set this accordingly
     'app',
-    'cmv',{
-        name: 'proj4js',
-        location: 'proj4js/dist'
-      },
+    'cmv', 
     'dijit',
     'dojo',
     'dojox',
@@ -61,11 +59,11 @@ var profile = {
       location: 'moment',
       main: 'moment',
       trees: [
-          // don't bother with .hidden, tests, min, src, and templates
-          [".", ".", /(\/\.)|(~$)|(test|txt|src|min|templates)/]
+        // don't bother with .hidden, tests, min, src, and templates
+        [".", ".", /(\/\.)|(~$)|(test|txt|src|min|templates)/]
       ],
       resourceTags: {
-        amd: function(filename, mid){
+        amd: function(filename, mid) {
           return /\.js$/.test(filename);
         }
       }
@@ -87,7 +85,7 @@ var profile = {
   // The default selector engine is not included by default in a dojo.js build in order to make mobile builds
   // smaller. We add it back here to avoid that extra HTTP request. There is also an "acme" selector available; if
   // you use that, you will need to set the `selectorEngine` property in index.html, too.
-  selectorEngine: 'lite',
+  selectorEngine: 'acme',
 
   // Any module in an application can be converted into a "layer" module, which consists of the original module +
   // additional dependencies built into the same file. Using layers allows applications to reduce the number of HTTP
@@ -100,6 +98,8 @@ var profile = {
     'dojo/dojo': {
 
       //put all styles in the build.css bundle
+      //TODO: This isn't working yet. We need to include the build plugin
+      //first
       targetStylesheet: 'app/css/build.css',
 
       // By default, the build system will try to include `dojo/main` in the built `dojo/dojo` layer, which adds
@@ -119,7 +119,11 @@ var profile = {
         'dojox/gfx/filters',
         'dojox/gfx/svgext',
         'dojox/gfx/shape',
-        'esri/dijit/Attribution'
+        'esri/dijit/Attribution',
+
+        //css module loader
+        'xstyle/css',
+        'xstyle/load-css'
       ],
 
       // You can define the locale for your application if you like

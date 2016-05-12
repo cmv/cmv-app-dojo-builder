@@ -34,15 +34,16 @@ After:
 * `npm install -g grunt-cli` - installs global grunt
 * `npm install` - installs required node and bower packages
 * `npm run clean` - removes built files from `dist` directory
-* `npm run build` - run the Dojo build on application
-* `npm run build-dev` - run the Dojo build on application but leave all javascript files. Useful for debugging builds
+* `npm run build` - run the Dojo build on application and run the cleanup tasks which remove all js and css files
+* `npm run build-dev` - run the Dojo build on application but leave all files. Useful for debugging builds
 
 If you have [Python](https://www.python.org/) you can run `python -m SimpleHTTPServer` in same folder as application to run it in a browser.
 
 ## Customizing dojo layers
 
-1. Use `profiles/viewer.profile.js` to add your layers. One way to customize layers is to have one big one `dojo/dojo.js`.
-2. Another option is to have one main layer `dojo/dojo.js` and several others like config files that are loaded on demand. This is the current setup in `profiles/viewer.profile.js`.
+1. Use `build.profile.js`, `viewer.js`, and other config files to add your layers. The current setup uses one large layer, `dojo/dojo.js`.
+2. Another option is to have one main layer `dojo/dojo.js` and several others like config files that are loaded on demand.
+3. When adding layer files, both `build.profile.js` and `Gruntfile.js` clean task should be modified. Otherwise grunt will remove the file when it cleans up the build.
 
 ##Troubleshooting
 

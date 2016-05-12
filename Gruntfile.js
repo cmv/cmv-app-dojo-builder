@@ -38,11 +38,9 @@ module.exports = function (grunt) {
           '!dist/**/app/config/**/*.js',
           '!dist/**/app/css/**',
           '!dist/**/images/**',
-          '!dist/**/nls/**',
-          '!dist/**/css/**',
           '!dist/**/resources/**',
           '!dist/**/dojo/dojo.js',
-          '!dist/**/*js.map'
+          '!dist/**/*.js.map'
         ],
         filter: 'isFile'
       },

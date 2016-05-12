@@ -50,7 +50,6 @@ Instead of running grunt `dojo-build`, instead try running `build-viewer.sh`. Th
 
 ## Resources
 
+* [Esri JSAPI Resources](https://github.com/Esri/jsapi-resources)
 * [CMV](https://github.com/cmv/cmv-app)
 * [The Dojo Build System](https://dojotoolkit.org/reference-guide/1.10/build/)
-* [All about Git Submodules](https://git-scm.com/book/en/v2/Git-Tools-Submodules)
-* [Dojo Boilerplate](https://github.com/csnover/dojo-boilerplate)

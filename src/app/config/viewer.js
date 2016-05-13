@@ -28,6 +28,7 @@ define([
     'esri/dijit/OverviewMap',
     'esri/dijit/Scalebar',
     'esri/SnappingManager',
+    'esri/dijit/editing/Editor',
 
     //cmv widgets
     'gis/dijit/Growler',

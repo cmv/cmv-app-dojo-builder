@@ -14,7 +14,7 @@
 <body class="dbootstrap">
   <div class="appHeader">
     <div class="headerLogo">
-      <img alt="logo" src="cmv/viewer/images/rocket-logo.png" height="54" />
+      <img alt="logo" src="bower_modules/cmv/viewer/images/rocket-logo.png" height="54" />
     </div>
     <div class="headerTitle">
       <span id="headerTitleSpan">
@@ -54,20 +54,41 @@
           'proj4js': 'app/vendor'
         }
       },
-      packages: [
-        'cmv',
-        'dgrid',
-        'dijit',
-        'dojo',
-        'dojox', {
+      packages: [{
+          name: 'cmv',
+          location: 'bower_modules/cmv'
+        },{
+          name: 'dgrid',
+          location: 'bower_modules/dgrid'
+        },{
+          name: 'dijit',
+          location: 'bower_modules/dijit'
+        },{
+          name: 'dojo',
+          location: 'bower_modules/dojo'
+        },{
+          name: 'dojox',
+          location: 'bower_modules/dojox'
+        },{
           name: 'put-selector',
+          location: 'bower_modules/put-selector',
           main: 'put'
-        },
-        'xstyle',
-        'esri',
-        'moment',
-        'dstore',
-        'app'
+        },{
+          name: 'xstyle',
+          location: 'bower_modules/xstyle'
+        },{
+          name: 'esri',
+          location: 'bower_modules/esri'
+        },{
+          name: 'moment',
+          location: 'bower_modules/moment'
+        },{
+          name: 'dstore',
+          location: 'bower_modules/dstore'
+        },{
+          name: 'app',
+          location: 'app'
+        }
       ],
       // Use the smaller, faster "lite" CSS selector engine, which works in all browsers IE8+
       selectorEngine: 'lite',
@@ -76,7 +97,7 @@
       tlmSiblingOfDojo: false
     };
   </script>
-  <script src="dojo/dojo.js"></script>
+  <script src="bower_modules/dojo/dojo.js"></script>
   <script>
     require(['app/app'], function(app) {
       (new app()).startup();

@@ -1,8 +1,19 @@
 #bower installs
-src/bower_modules
+src/dojo/
+src/cmv/
+src/dgrid/
+src/dijit/
+src/dojox/
+src/dstore/
+src/esri/
+src/moment/
+src/put-selector/
+src/util/
+src/xstyle/
 
 #built files
 dist
 
 #node installs
 node_modules
+*.log

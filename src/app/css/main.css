@@ -1,7 +1,7 @@
 
-@import url('../../bower_modules/dojo/resources/dojo.css');
-@import url('../../bower_modules/dgrid/css/dgrid.css');
-@import url('../../bower_modules/esri/css/esri.css');
-@import url('../../bower_modules/cmv/viewer/css/main.css');
-@import url('../../bower_modules/cmv/viewer/css/theme/dbootstrap/dbootstrap.css');
+@import url('../../dojo/resources/dojo.css');
+@import url('../../dgrid/css/dgrid.css');
+@import url('../../esri/css/esri.css');
+@import url('../../cmv/viewer/css/main.css');
+@import url('../../cmv/viewer/css/theme/dbootstrap/dbootstrap.css');
 @import url('./Font-Awesome-4.6.1/css/font-awesome.min.css');

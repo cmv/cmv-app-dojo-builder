@@ -30,6 +30,10 @@ define([
     'esri/SnappingManager',
     'esri/dijit/editing/Editor',
 
+    //dgrid mobile
+    'dgrid/util/touch',
+    'dgrid/TouchScroll',
+
     //cmv widgets
     'gis/dijit/Growler',
     'gis/dijit/Basemaps',

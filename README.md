@@ -36,8 +36,8 @@ After:
 * `npm install -g grunt-cli` - installs global grunt
 * `npm install` - installs required node and bower packages
 * `npm run clean` - removes built files from `dist` directory
-* `npm run build` - run the Dojo build on application and run the cleanup tasks which remove all js and css files
-* `npm run build-dev` - run the Dojo build on application but leave all files. Useful for debugging builds
+* `npm run build-dev` - run the Dojo build on application but leave all files. Useful for debugging builds. This will result in a large folder size, although the browser *shouldn't* be requesting any extra files.
+* `npm run build` - run the Dojo build on application and run the cleanup tasks which remove all extra js and css files that aren't included in the build. If you add extra layers to the profile, the `Gruntfile.js` must be modified to account for this so these layers aren't removed!
 
 If you have [Python](https://www.python.org/) you can run `python -m SimpleHTTPServer` in same folder as application to run it in a browser.
 

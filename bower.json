@@ -4,7 +4,7 @@
   "license": "Apache-2.0",
   "dependencies": {
     "esri": "arcgis-js-api#3.16.0",
-    "cmv": "git://github.com/roemhildtg/cmv-app.git#fix/fix-dojo-build-issues",
+    "cmv": "https://github.com/cmv/cmv-app.git#develop",
     "xstyle": "kriszyp/xstyle#0.3.2"
   },
   "resolutions": {

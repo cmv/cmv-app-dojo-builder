@@ -29,10 +29,7 @@ define([
     'esri/dijit/Scalebar',
     'esri/SnappingManager',
     'esri/dijit/editing/Editor',
-
-    //dgrid mobile
-    'dgrid/util/touch',
-    'dgrid/TouchScroll',
+    'esri/layers/vector-tile',
 
     //cmv widgets
     'gis/dijit/Growler',

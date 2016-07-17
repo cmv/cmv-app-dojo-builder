@@ -117,7 +117,11 @@ var profile = {
         'dojox/gfx/filters',
         'dojox/gfx/svgext',
         'dojox/gfx/shape',
-        'esri/dijit/Attribution'
+        'esri/dijit/Attribution',
+
+        //dgrid mobile
+        'dgrid/util/touch',
+        'dgrid/TouchScroll'
       ],
 
       // You can define the locale for your application if you like

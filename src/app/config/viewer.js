@@ -29,7 +29,7 @@ define([
     'esri/dijit/Scalebar',
     'esri/SnappingManager',
     'esri/dijit/editing/Editor',
-    'esri/layers/vector-tile',
+    'esri/layers/VectorTileLayer',
 
     //cmv widgets
     'gis/dijit/Growler',

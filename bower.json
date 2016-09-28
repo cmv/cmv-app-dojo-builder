@@ -3,9 +3,10 @@
   "version": "1.0.0",
   "license": "Apache-2.0",
   "dependencies": {
-    "esri": "arcgis-js-api#3.16.0",
-    "cmv": "https://github.com/cmv/cmv-app.git#develop",
-    "xstyle": "kriszyp/xstyle#0.3.2"
+    "esri": "arcgis-js-api#master",
+    "cmv": "cmv/cmv-app.git#develop",
+    "xstyle": "kriszyp/xstyle#0.3.2",
+    "flag-icon-css": "lipis/flag-icon-css#^2.5.0"
   },
   "resolutions": {
     "dojo": "v1.10.4/esri-3.14.0",

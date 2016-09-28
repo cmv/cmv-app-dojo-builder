@@ -54,6 +54,7 @@ var profile = {
     'dgrid',
     'xstyle',
     'put-selector',
+    'flag-icon-css',
     'esri', {
       name: 'moment',
       location: 'moment',

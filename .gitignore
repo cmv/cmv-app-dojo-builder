@@ -14,8 +14,8 @@ src/put-selector/
 src/util/
 src/xstyle/
 
-#built files
-dist
+#built log
+build-report.txt
 
 #node installs
 node_modules

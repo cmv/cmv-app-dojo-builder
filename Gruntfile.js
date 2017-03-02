@@ -53,6 +53,7 @@ module.exports = function(grunt) {
 
                     //...except a few things
                     '!dist/index.html',
+                    '!dist/dojoConfig.js',
 
                     //dojo built layers and css files
                     //include other layers, or they'll be deleted

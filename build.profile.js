@@ -120,6 +120,7 @@ var profile = {
         'dojox/gfx/svgext',
         'dojox/gfx/shape',
         'esri/dijit/Attribution',
+        'esri/layers/VectorTileLayerImpl',
 
         //dgrid mobile
         'dgrid/util/touch',

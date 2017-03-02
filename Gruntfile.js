@@ -84,11 +84,8 @@ module.exports = function(grunt) {
                 files: [{
                     expand: true,
                     cwd: 'src/',
-                    src: ['index.html'],
-                    dest: './dist/',
-                    rename: function(dest, src) {
-                        return dest + 'index.html';
-                    }
+                    src: ['index.html', 'dojoConfig.js'],
+                    dest: './dist/'
                 }]
             }
         },

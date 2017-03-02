@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="apple-mobile-web-app-capable" content="yes">
+  <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0">
+  <title></title>
+   <link rel="stylesheet" type="text/css" href="app/css/build.css">
+</head>
+
+<body class="cmv flat">
+  <div class="appHeader">
+    <div class="headerLogo">
+      <img alt="logo" src="cmv/viewer/images/rocket-logo.png" height="54" />
+    </div>
+    <div class="headerTitle">
+      <span id="headerTitleSpan">
+          Configurable Map Viewer
+      </span>
+      <div id="subHeaderTitleSpan" class="subHeaderTitle">
+          make it your own
+      </div>
+    </div>
+    <div class="search">
+      <div id='geocodeDijit'>
+      </div>
+    </div>
+    <div class="headerLinks">
+      <div id="helpDijit">
+      </div>
+    </div>
+  </div>
+
+  <!--[if lt IE 9]>
+      <script type="text/javascript" src="//cdnjs.cloudflare.com/ajax/libs/es5-shim/4.0.3/es5-shim.min.js"></script>
+  <![endif]-->
+  <script src="dojoConfig.js"></script>
+  <script src="dojo/dojo.js"></script>
+  <script>
+    require(['app/app'], function(app) {
+      (new app()).startup();
+    });
+  </script>
+
+</body>
+
+</html>

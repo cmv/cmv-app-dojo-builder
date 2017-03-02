@@ -23,6 +23,9 @@ var dojoConfig = {
         name: 'dgrid',
         location: 'dgrid'
     }, {
+        name: 'dgrid1',
+        location: 'dgrid1'
+    }, {
         name: 'dijit',
         location: 'dijit'
     }, {
@@ -51,8 +54,8 @@ var dojoConfig = {
         name: 'app',
         location: 'app'
     }, {
-      name: 'flag-icon-css',
-      location: 'flag-icon-css'
+        name: 'flag-icon-css',
+        location: 'flag-icon-css'
     }],
     // Use the smaller, faster "lite" CSS selector engine, which works in all browsers IE8+
     selectorEngine: 'lite',

@@ -24,10 +24,10 @@ define([
   //_MyCustomMixin
 ) {
   return declare([
-    _ControllerBase,
     _ConfigMixin,
     _LayoutMixin,
     _MapMixin,
-    _WidgetsMixin
+    _WidgetsMixin,
+    _ControllerBase
   ]);
 });

@@ -4,7 +4,7 @@
   "license": "Apache-2.0",
   "dependencies": {
     "esri": "arcgis-js-api#master",
-    "cmv": "cmv/cmv-app.git#develop",
+    "cmv": "cmv/cmv-app#develop",
     "xstyle": "kriszyp/xstyle#0.3.2",
     "flag-icon-css": "lipis/flag-icon-css#^2.5.0"
   },

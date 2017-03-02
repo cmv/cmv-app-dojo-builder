@@ -52,6 +52,7 @@ var profile = {
     'dojox',
     'dstore',
     'dgrid',
+    'dgrid1',
     'xstyle',
     'put-selector',
     'flag-icon-css',

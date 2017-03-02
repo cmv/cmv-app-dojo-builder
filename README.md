@@ -7,7 +7,7 @@ This branch is the esri-jsapi resource directory setup for creating single file 
 
 See the difference! Note: the load times shown below are not observed in a production environment, and should not be used for comparison.
 
-Instead, [Try The Demo](http://roemhildtg.github.io/cmv-app-dojo-builder/dist/) for an realistic comparison.
+Instead, [Try The Demo](http://roemhildtg.github.io/cmv-app-dojo-builder/dist/index.html) for an realistic comparison.
 
 Before:
 

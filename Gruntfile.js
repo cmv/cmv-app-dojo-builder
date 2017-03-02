@@ -33,7 +33,7 @@ module.exports = function(grunt) {
                 }]
             },
             your_target: {
-                src: 'dist/index.html'
+                src: 'dist/dojoConfig.js'
             }
         },
         clean: {

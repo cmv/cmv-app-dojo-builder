@@ -1,0 +1,2 @@
+//>>built
+define("cmv/viewer/js/gis/dijit/Identify/nls/resource",{root:{labels:{selectLayer:'Choose "All Visible Layers" or a single layer for identify:',allVisibleLayers:"*** All Visible Layers ***"},rightClickMenuItem:{label:"Identify here"},mapInfoWindow:{identifyingTitle:"Identifying..."}},es:!0,fr:!0,"pt-br":!0,"pt-pt":!0});

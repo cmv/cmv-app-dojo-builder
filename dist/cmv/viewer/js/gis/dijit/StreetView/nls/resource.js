@@ -1,0 +1,2 @@
+//>>built
+define("cmv/viewer/js/gis/dijit/StreetView/nls/resource",{root:{messages:{instructions:"Click the StreetView button then click the map at your desired location.",notAvailable:"Unfortunately, Google StreetView imagery is not yet available at that location."},rightClickMenuItem:{label:"Google StreetView here"}},es:!0,fr:!0,"pt-br":!0,"pt-pt":!0});

@@ -1,0 +1,3 @@
+//>>built
+define("cmv/viewer/js/gis/dijit/Find/nls/resource",{root:{selectQuery:"Select query",searchText:{label:"Search for",placeholder:"Enter the text you want to search for."},exactMatches:"Find exact matches only",searchButton:{label:"Search",busyLabel:"searching"},clearButton:{label:"Clear"},searching:"Searching...",resultsLabel:{multipleResultsSuffix:"s",labelPrefix:"Result",labelSuffix:"found"},noResultsLabel:"No results found.",optionsLabel:"Options",zoomOnSelect:"Zoom on select",zoomOnDeselect:"Zoom on deselect"},
+es:!0,fr:!0,"pt-br":!0,"pt-pt":!0});

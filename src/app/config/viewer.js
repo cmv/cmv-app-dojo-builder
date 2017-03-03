@@ -33,7 +33,6 @@ define([
     'esri/SnappingManager',
     'esri/dijit/editing/Editor',
     'esri/layers/VectorTileLayer',
-    'esri/dijit/Legend',
 
     //cmv widgets
     'gis/dijit/Growler',
@@ -49,9 +48,10 @@ define([
     'gis/dijit/Editor',
     'gis/dijit/StreetView',
     'gis/dijit/LocateButton',
-    'gis/dijit/Locale'
+    'gis/dijit/Locale',
+    'gis/dijit/Legend'
 
-], function(units, Extent, esriConfig, /*urlUtils,*/ GeometryService, ImageParameters, i18n, GoogleMapsLoader, topic) {
+], function (units, Extent, esriConfig, /*urlUtils,*/ GeometryService, ImageParameters, i18n, GoogleMapsLoader, topic) {
 
     // url to your proxy page, must be on same machine hosting you app. See proxy folder for readme.
     esriConfig.defaults.io.proxyUrl = 'proxy/proxy.ashx';
@@ -77,7 +77,7 @@ define([
     //     layerIds: [0],
     //     layerOption: 'show'
     // })
-    function buildImageParameters(config) {
+    function buildImageParameters (config) {
         config = config || {};
         var ip = new ImageParameters();
         //image parameters for dynamic services, set to png32 for higher quality exports
@@ -94,7 +94,7 @@ define([
     //these topics publish a simple message to the growler
     //in a real world example, these topics would be used
     //in their own widget to listen for layer menu click events
-    topic.subscribe('layerControl/hello', function(event) {
+    topic.subscribe('layerControl/hello', function (event) {
         topic.publish('growler/growl', {
             title: 'Hello!',
             message: event.layer._titleForLegend + ' ' +
@@ -102,7 +102,7 @@ define([
                 ' says hello'
         });
     });
-    topic.subscribe('layerControl/goodbye', function(event) {
+    topic.subscribe('layerControl/goodbye', function (event) {
         topic.publish('growler/growl', {
             title: 'Goodbye!',
             message: event.layer._titleForLegend + ' ' +

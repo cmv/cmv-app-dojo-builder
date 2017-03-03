@@ -1,7 +1,7 @@
 var fs = require('fs'),
     path = require('path');
 
-function isEmptyDirectory(filepath) {
+function isEmptyDirectory (filepath) {
     var children, x;
     if (!fs.statSync(filepath).isDirectory()) {
         return false;
@@ -15,7 +15,7 @@ function isEmptyDirectory(filepath) {
     return true;
 }
 
-module.exports = function(grunt) {
+module.exports = function (grunt) {
     // Build customizations would be left up to developer to implement.
     grunt.loadNpmTasks('grunt-dojo');
     grunt.loadNpmTasks('grunt-contrib-copy');
@@ -73,6 +73,12 @@ module.exports = function(grunt) {
                     '!dist/**/resources/**',
                     '!dist/**/*.js.map',
 
+                    // i18n
+                    '!dist/**/nls/*.js',
+                    'dist/**/nls/*.consoleStripped.js',
+                    'dist/**/nls/*.uncompressed.js',
+                    '!dist/moment/locale/**',
+
                     // flags
                     '!dist/**/flags/**/**'
                 ],
@@ -96,7 +102,7 @@ module.exports = function(grunt) {
         dojo: {
             dist: {
                 options: {
-                    releaseDir: '../dist',
+                    releaseDir: '../dist'
                 }
             },
             options: {

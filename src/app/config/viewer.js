@@ -33,6 +33,7 @@ define([
     'esri/SnappingManager',
     'esri/dijit/editing/Editor',
     'esri/layers/VectorTileLayer',
+    'esri/dijit/Legend',
 
     //cmv widgets
     'gis/dijit/Growler',
@@ -47,7 +48,8 @@ define([
     'gis/dijit/Directions',
     'gis/dijit/Editor',
     'gis/dijit/StreetView',
-    'gis/dijit/LocateButton'
+    'gis/dijit/LocateButton',
+    'gis/dijit/Locale'
 
 ], function(units, Extent, esriConfig, /*urlUtils,*/ GeometryService, ImageParameters, i18n, GoogleMapsLoader, topic) {
 

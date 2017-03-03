@@ -71,7 +71,10 @@ module.exports = function(grunt) {
                     '!dist/**/fonts/**',
                     '!dist/**/images/**',
                     '!dist/**/resources/**',
-                    '!dist/**/*.js.map'
+                    '!dist/**/*.js.map',
+
+                    // flags
+                    '!dist/**/flags/**/**'
                 ],
                 filter: 'isFile'
             },

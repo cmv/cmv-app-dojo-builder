@@ -7,14 +7,17 @@
 @import url('../../cmv/viewer/css/main.css');
 
 /*
-HACK: replace the esri search dijit because the dojo
-build system removes data-url esri font
+include the esri font face
  */
 
-span.searchIcon.esri-icon-search {
-    font-family: FontAwesome !important;
-}
-
-.esri-icon-search:before {
-    content: "\f002";
+@font-face {
+    font-family: "CalciteWebCoreIcons";
+    src: url('../../esri/themes/calcite/icons/fonts/CalciteWebCoreIcons.eot');
+    /* IE9 Compat Modes */
+    src: url('../../esri/themes/calcite/icons/fonts/CalciteWebCoreIcons.eot?#iefix') format('embedded-opentype'), /* IE6-IE8 */
+    url('../../esri/themes/calcite/icons/fonts/CalciteWebCoreIcons.woff2') format('woff2'), /* Super Modern Browsers */
+    url('../../esri/themes/calcite/icons/fonts/CalciteWebCoreIcons.woff') format('woff'), /* Pretty Modern Browsers */
+    url('../../esri/themes/calcite/icons/fonts/CalciteWebCoreIcons.ttf') format('truetype'), /* Safari, Android, iOS */
+    url('../../esri/themes/calcite/icons/fonts/CalciteWebCoreIcons.svg#CalciteWebCoreIcons') format('svg');
+    /* Legacy iOS */
 }

@@ -1,5 +1,7 @@
 ## CMV-App Dojo Build
 
+[![Build Status](https://travis-ci.org/cmv/cmv-app-dojo-builder.svg?branch=master)](https://travis-ci.org/cmv/cmv-app-dojo-builder)
+
 [Try The Demo](http://cmv.github.io/cmv-app-dojo-builder/dist/index.html)
 
 This branch is the esri-jsapi resource directory setup for creating single file dojo builds. It downloads dojo, the esri api, and CMV as bower resources and can be used to create high performance dojo builds using the dojo build system. The primary benefits are:

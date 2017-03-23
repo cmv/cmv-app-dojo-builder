@@ -22,7 +22,7 @@ module.exports = function (grunt) {
     grunt.loadNpmTasks('grunt-contrib-clean');
     grunt.loadNpmTasks('grunt-strip-code');
     grunt.initConfig({
-        strip_code: {
+        strip_code: { 
             options: {
                 blocks: [{
                     start_block: '<!--debug-start-->',
@@ -100,13 +100,14 @@ module.exports = function (grunt) {
             }
         },
         dojo: {
-            dist: {
+            travis: {
                 options: {
-                    releaseDir: '../dist'
+                    profile: 'profiles/travis.profile.js'
                 }
             },
             options: {
-                profile: 'build.profile.js',
+                releaseDir: '../dist',
+                profile: 'profiles/build.profile.js',
                 dojo: 'src/dojo/dojo.js',
                 load: 'build',
                 cwd: './',
@@ -116,6 +117,7 @@ module.exports = function (grunt) {
     });
 
     grunt.registerTask('build-dev', ['clean:build', 'dojo', 'copy']);
+    grunt.registerTask('build-travis', ['clean:build', 'dojo:travis']);
     grunt.registerTask('build', ['clean:build', 'dojo', 'copy', 'clean:afterbuild', 'clean:emptydir', 'strip_code']);
 
 };

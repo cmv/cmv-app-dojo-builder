@@ -9,11 +9,10 @@
     "lint": "eslint src/app/**/*.js --fix",
     "postinstall": "bower install",
     "build-dev": "grunt build-dev -v",
-    "prebuild": "npm run lint",
     "build": "grunt build",
     "clean": "grunt clean",
     "pretest": "npm run lint",
-    "test": "grunt build-travis -v"
+    "test": "grunt build-dev -v --profile=travis"
   },
   "license": "Apache-2.0",
   "devDependencies": {

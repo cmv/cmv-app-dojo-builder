@@ -13,6 +13,7 @@ var dojoConfig = {
         '*': {
             'viewer': 'cmv/viewer/js/viewer',
             'gis': 'cmv/viewer/js/gis',
+            'config': 'app/config',
             'proj4js': 'app/vendor'
         }
     },

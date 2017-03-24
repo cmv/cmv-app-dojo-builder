@@ -47,7 +47,11 @@ var dojoConfig = {
         location: 'esri'
     }, {
         name: 'moment',
-        location: 'moment'
+        location: 'moment',
+        trees: [
+            // don't bother with .hidden, tests, min, src, and templates
+            ['.', '.', /(\/\.)|(~$)|(test|txt|src|min|templates)/]
+        ]
     }, {
         name: 'dstore',
         location: 'dstore'

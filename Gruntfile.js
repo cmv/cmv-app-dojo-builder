@@ -107,6 +107,7 @@ module.exports = function (grunt) {
                 }
             },
             options: {
+                dojoConfig: 'src/dojoConfig.js',
                 releaseDir: '../dist',
                 profile: 'profiles/build.profile.js',
                 dojo: 'src/dojo/dojo.js',

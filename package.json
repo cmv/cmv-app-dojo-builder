@@ -6,10 +6,13 @@
     "url": "https://github.com/Esri/jsapi-resources/bower/dojo"
   },
   "scripts": {
+    "lint": "eslint src/app/**/*.js --fix",
     "postinstall": "bower install",
     "build-dev": "grunt build-dev -v",
+    "prebuild": "npm run lint",
     "build": "grunt build",
     "clean": "grunt clean",
+    "pretest": "npm run lint",
     "test": "grunt build-travis -v"
   },
   "license": "Apache-2.0",

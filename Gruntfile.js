@@ -15,7 +15,13 @@ function isEmptyDirectory (filepath) {
     return true;
 }
 
+
 module.exports = function (grunt) {
+
+
+    var profile = 'profiles/' + (grunt.option('profile') || 'build') + '.profile.js';
+
+
     // Build customizations would be left up to developer to implement.
     grunt.loadNpmTasks('grunt-dojo');
     grunt.loadNpmTasks('grunt-contrib-copy');
@@ -101,15 +107,10 @@ module.exports = function (grunt) {
         },
         dojo: {
             default: {},
-            travis: {
-                options: {
-                    profile: 'profiles/travis.profile.js'
-                }
-            },
             options: {
                 dojoConfig: 'src/dojoConfig.js',
                 releaseDir: '../dist',
-                profile: 'profiles/build.profile.js',
+                profile: profile,
                 dojo: 'src/dojo/dojo.js',
                 load: 'build',
                 cwd: './',
@@ -118,10 +119,7 @@ module.exports = function (grunt) {
         }
     });
 
-    var profile = grunt.option('profile') || 'default';
-    var dojoTask = 'dojo:' + profile;
-
-    grunt.registerTask('build-dev', ['clean:build', dojoTask, 'copy']);
-    grunt.registerTask('build', ['clean:build', dojoTask, 'copy', 'strip_code', 'clean:afterbuild', 'clean:emptydir']);
+    grunt.registerTask('build-dev', ['clean:build', 'dojo', 'copy']);
+    grunt.registerTask('build', ['clean:build', 'dojo', 'copy', 'strip_code', 'clean:afterbuild', 'clean:emptydir']);
 
 };

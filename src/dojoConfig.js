@@ -61,6 +61,9 @@ var dojoConfig = {
     }, {
         name: 'flag-icon-css',
         location: 'flag-icon-css'
+    }, {
+        name: 'font-awesome',
+        location: 'font-awesome'
     }],
     // Use the smaller, faster "lite" CSS selector engine, which works in all browsers IE8+
     selectorEngine: 'lite',

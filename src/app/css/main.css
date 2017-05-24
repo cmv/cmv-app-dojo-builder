@@ -3,7 +3,7 @@
 @import url('../../esri/css/esri.css');
 @import url('../../cmv/viewer/css/theme/flat/flat.css');
 @import url('../../cmv/viewer/css/cmv-theme-overrides.css');
-@import url('./Font-Awesome-4.6.1/css/font-awesome.min.css');
+@import url('../../font-awesome/css/font-awesome.css');
 @import url('../../cmv/viewer/css/main.css');
 
 /*

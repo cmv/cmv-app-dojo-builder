@@ -5,7 +5,8 @@
   "dependencies": {
     "esri": "arcgis-js-api#^3.19.0",
     "cmv": "cmv/cmv-app#c9c56b5ffeff61b3bc5f2045552640f39a022b4f",
-    "flag-icon-css": "lipis/flag-icon-css#^2.5"
+    "flag-icon-css": "lipis/flag-icon-css#^2.5",
+    "font-awesome": "^4.7.0"
   },
   "resolutions": {
     "dojox": "v1.12.1/esri-3.20.0",

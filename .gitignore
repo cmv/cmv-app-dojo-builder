@@ -1,18 +1,18 @@
-#bower installs
-src/dojo/
-src/cmv/
-src/dgrid/
-src/dgrid1/
-src/dojo-themes/
-src/flag-icon-css/
-src/dijit/
-src/dojox/
-src/dstore/
-src/esri/
-src/moment/
-src/put-selector/
-src/util/
-src/xstyle/
+# bower installs
+# ignore everything
+src/*
+
+# except these folders
+!src/app/
+!src/dojoCOnfig.js
+!src/index.html
+
+# node installs
+node_modules
+*.log
+src/pdfmake/
+dist/build-report.txt
+
 
 #built log
 build-report.txt

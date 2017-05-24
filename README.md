@@ -1,13 +1,17 @@
-## What?
+## CMV-App Dojo Build
+
+[![Build Status](https://travis-ci.org/cmv/cmv-app-dojo-builder.svg?branch=master)](https://travis-ci.org/cmv/cmv-app-dojo-builder)
+
+[Try The Demo](http://cmv.github.io/cmv-app-dojo-builder/dist/index.html)
 
 This branch is the esri-jsapi resource directory setup for creating single file dojo builds. It downloads dojo, the esri api, and CMV as bower resources and can be used to create high performance dojo builds using the dojo build system. The primary benefits are:
 
  * Smaller downloads: only the modules used in an application are downloaded
- * Quicker downloads: HTML and Javascript files are concatenated and optimized into single files using the closure compiler. CSS are concatenated using xstyle
+ * Quicker load times: HTML and Javascript files are concatenated and optimized into single files using the closure compiler. CSS are concatenated using xstyle
 
 See the difference! Note: the load times shown below are not observed in a production environment, and should not be used for comparison.
 
-Instead, [Try The Demo](http://roemhildtg.github.io/cmv-app-dojo-builder/dist/index.html) for an realistic comparison.
+Instead, [Try The Demo](http://cmv.github.io/cmv-app-dojo-builder/dist/index.html) for an realistic comparison.
 
 Before:
 
@@ -16,14 +20,6 @@ Before:
 After:
 
 ![After Build](./after.png)
-
-# CMV - The Configurable Map Viewer
-
-[![Read The Docs](https://img.shields.io/badge/docs-1.3.4-brightgreen.svg?style=flat)](http://docs.cmv.io/) [![Gitter](https://badges.gitter.im/Join Chat.svg)](https://gitter.im/cmv/cmv-app?utm_source=badge&utm_medium=badge&utm_campaign=pr-badge&utm_content=badge) [![Build Status](http://travis-ci.org/cmv/cmv-app.svg?branch=master)](http://travis-ci.org/cmv/cmv-app)
-
-## Introduction
-
-[CMV](http://cmv.io/) is a community-supported open source mapping framework. CMV works with the [Esri JavaScript API](http://docs.cmv.io/en/latest/developers.arcgis.com/javascript/jsapi/), [ArcGIS Server](http://www.esri.com/software/arcgis/arcgisserver), [ArcGIS Online](https://arcgis.com/) and more.
 
 ## Requirements
 * [node & npm](https://nodejs.org/)
@@ -38,8 +34,6 @@ After:
 * `npm run clean` - removes built files from `dist` directory
 * `npm run build-dev` - run the Dojo build on application but leave all files. Useful for debugging builds. This will result in a large folder size, although the browser *shouldn't* be requesting any extra files.
 * `npm run build` - run the Dojo build on application and run the cleanup tasks which remove all extra js and css files that aren't included in the build. If you add extra layers to the profile, the `Gruntfile.js` must be modified to account for this so these layers aren't removed!
-
-If you have [Python](https://www.python.org/) you can run `python -m SimpleHTTPServer` in same folder as application to run it in a browser.
 
 ## Customizing dojo layers
 

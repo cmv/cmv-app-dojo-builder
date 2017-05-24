@@ -3,7 +3,7 @@
 @import url('../../esri/css/esri.css');
 @import url('../../cmv/viewer/css/theme/flat/flat.css');
 @import url('../../cmv/viewer/css/cmv-theme-overrides.css');
-@import url('./Font-Awesome-4.6.1/css/font-awesome.min.css');
+@import url('../../font-awesome/css/font-awesome.css');
 @import url('../../cmv/viewer/css/main.css');
 
 /*
@@ -11,13 +11,19 @@ include the esri font face
  */
 
 @font-face {
-    font-family: "CalciteWebCoreIcons";
-    src: url('../../esri/themes/calcite/icons/fonts/CalciteWebCoreIcons.eot');
-    /* IE9 Compat Modes */
-    src: url('../../esri/themes/calcite/icons/fonts/CalciteWebCoreIcons.eot?#iefix') format('embedded-opentype'), /* IE6-IE8 */
-    url('../../esri/themes/calcite/icons/fonts/CalciteWebCoreIcons.woff2') format('woff2'), /* Super Modern Browsers */
-    url('../../esri/themes/calcite/icons/fonts/CalciteWebCoreIcons.woff') format('woff'), /* Pretty Modern Browsers */
-    url('../../esri/themes/calcite/icons/fonts/CalciteWebCoreIcons.ttf') format('truetype'), /* Safari, Android, iOS */
-    url('../../esri/themes/calcite/icons/fonts/CalciteWebCoreIcons.svg#CalciteWebCoreIcons') format('svg');
-    /* Legacy iOS */
+  font-family: "CalciteWebCoreIcons";
+  src: url('../../esri/themes/calcite/icons/fonts/CalciteWebCoreIcons.eot');
+  /* IE9 Compat Modes */
+  src: url('../../esri/themes/calcite/icons/fonts/CalciteWebCoreIcons.eot?#iefix') format('embedded-opentype'), /* IE6-IE8 */
+  url('../../esri/themes/calcite/icons/fonts/CalciteWebCoreIcons.woff2') format('woff2'), /* Super Modern Browsers */
+  url('../../esri/themes/calcite/icons/fonts/CalciteWebCoreIcons.woff') format('woff'), /* Pretty Modern Browsers */
+  url('../../esri/themes/calcite/icons/fonts/CalciteWebCoreIcons.ttf') format('truetype'), /* Safari, Android, iOS */
+  url('../../esri/themes/calcite/icons/fonts/CalciteWebCoreIcons.svg#CalciteWebCoreIcons') format('svg');
+  /* Legacy iOS */
+}
+
+@media screen and (max-width: 767px) {
+  #basemaps_widget .dijitButtonText {
+    display: none;
+  }
 }

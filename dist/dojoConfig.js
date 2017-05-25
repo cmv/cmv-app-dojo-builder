@@ -9,6 +9,7 @@ var dojoConfig = {
         '*': {
             'viewer': 'cmv/viewer/js/viewer',
             'gis': 'cmv/viewer/js/gis',
+            'config': 'app/config',
             'proj4js': 'app/vendor'
         }
     },
@@ -42,7 +43,11 @@ var dojoConfig = {
         location: 'esri'
     }, {
         name: 'moment',
-        location: 'moment'
+        location: 'moment',
+        trees: [
+            // don't bother with .hidden, tests, min, src, and templates
+            ['.', '.', /(\/\.)|(~$)|(test|txt|src|min|templates)/]
+        ]
     }, {
         name: 'dstore',
         location: 'dstore'
@@ -52,6 +57,9 @@ var dojoConfig = {
     }, {
         name: 'flag-icon-css',
         location: 'flag-icon-css'
+    }, {
+        name: 'font-awesome',
+        location: 'font-awesome'
     }],
     // Use the smaller, faster "lite" CSS selector engine, which works in all browsers IE8+
     selectorEngine: 'lite',

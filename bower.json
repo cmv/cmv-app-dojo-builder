@@ -4,7 +4,7 @@
   "license": "Apache-2.0",
   "dependencies": {
     "esri": "arcgis-js-api#^3.19.0",
-    "cmv": "cmv/cmv-app#f18a8d2a5f6f83551c285b16dfb16f7cc30057cf",
+    "cmv": "cmv/cmv-app#d178b290ab95002c2f475992ca6e8665251e76a1",
     "flag-icon-css": "lipis/flag-icon-css#^2.5"
   },
   "resolutions": {

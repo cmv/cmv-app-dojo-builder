@@ -9,29 +9,29 @@
  */
 
 var profile = {
-  // `basePath` is relative to the directory containing this profile file; in this case, it is being set to the
-  // src/ directory, which is the same place as the `baseUrl` directory in the loader configuration.
+    // `basePath` is relative to the directory containing this profile file; in this case, it is being set to the
+    // src/ directory, which is the same place as the `baseUrl` directory in the loader configuration.
     basePath: './src',
 
-  // Builds a new release.
+    // Builds a new release.
     action: 'release',
 
-  // Strips all comments and whitespace from CSS files and inlines @imports where possible.
+    // Strips all comments and whitespace from CSS files and inlines @imports where possible.
     cssOptimize: 'comments',
 
-  // Excludes tests, demos, and original template files from being included in the built version.
+    // Excludes tests, demos, and original template files from being included in the built version.
     mini: true,
 
-  // Uses Closure Compiler or "uglify" as the JavaScript minifier. This can also be set to "shrinksafe" to use ShrinkSafe,
-  // though ShrinkSafe is deprecated and not recommended.
-  // This option defaults to "" (no compression) if not provided.
-    optimize: 'closure',
+    // Uses Closure Compiler or "uglify" as the JavaScript minifier. This can also be set to "shrinksafe" to use ShrinkSafe,
+    // though ShrinkSafe is deprecated and not recommended.
+    // This option defaults to "" (no compression) if not provided.
+    optimize: false,
 
-  // We're building layers, so we need to set the minifier to use for those, too.
-  // This defaults to "shrinksafe" if not provided.
-    layerOptimize: 'closure',
+    // We're building layers, so we need to set the minifier to use for those, too.
+    // This defaults to "shrinksafe" if not provided.
+    layerOptimize: false,
 
-  // remap cmv imports to their relative directory
+    // remap cmv imports to their relative directory
     map: {
         '*': {
             'viewer': 'cmv/viewer/js/viewer',
@@ -40,11 +40,11 @@ var profile = {
         }
     },
 
-  // A list of packages that will be built. The same packages defined in the loader should be defined here in the
-  // build profile.
+    // A list of packages that will be built. The same packages defined in the loader should be defined here in the
+    // build profile.
     packages: [
-    // 'app' is a sample path for your application
-    // set this accordingly
+        // 'app' is a sample path for your application
+        // set this accordingly
         'app',
         'cmv',
         'dijit',
@@ -53,36 +53,36 @@ var profile = {
             name: 'dstore',
             location: 'dstore',
             trees: [
-        // don't bother with .hidden, tests, min, src, and templates
-        ['.', '.', /(\/\.)|(~$)|(test|txt|src|min|templates|build)/]
+                // don't bother with .hidden, tests, min, src, and templates
+                ['.', '.', /(\/\.)|(~$)|(test|txt|src|min|templates|build)/]
             ]
         }, {
             name: 'dgrid',
             location: 'dgrid',
             trees: [
-        // don't bother with .hidden, tests, min, src, and templates
-        ['.', '.', /(\/\.)|(~$)|(test|txt|src|min|templates)/]
+                // don't bother with .hidden, tests, min, src, and templates
+                ['.', '.', /(\/\.)|(~$)|(test|txt|src|min|templates)/]
             ]
         }, {
             name: 'dgrid1',
             location: 'dgrid1',
             trees: [
-        // don't bother with .hidden, tests, min, src, and templates
-        ['.', '.', /(\/\.)|(~$)|(test|txt|src|min|templates|demos)/]
+                // don't bother with .hidden, tests, min, src, and templates
+                ['.', '.', /(\/\.)|(~$)|(test|txt|src|min|templates|demos)/]
             ]
         }, {
             name: 'xstyle',
             location: 'xstyle',
             trees: [
-        // don't bother with .hidden, tests, min, src, and templates
-        ['.', '.', /(\/\.)|(~$)|(test|txt|src|min|templates)/]
+                // don't bother with .hidden, tests, min, src, and templates
+                ['.', '.', /(\/\.)|(~$)|(test|txt|src|min|templates)/]
             ]
         }, {
             name: 'put-selector',
             location: 'put-selector',
             trees: [
-        // don't bother with .hidden, tests, min, src, and templates
-        ['.', '.', /(\/\.)|(~$)|(test|txt|src|min|templates)/]
+                // don't bother with .hidden, tests, min, src, and templates
+                ['.', '.', /(\/\.)|(~$)|(test|txt|src|min|templates)/]
             ]
         },
         'flag-icon-css',
@@ -91,8 +91,8 @@ var profile = {
             location: 'moment',
             main: 'moment',
             trees: [
-        // don't bother with .hidden, tests, min, src, and templates
-        ['.', '.', /(\/\.)|(~$)|(test|txt|src|min|templates)/]
+                // don't bother with .hidden, tests, min, src, and templates
+                ['.', '.', /(\/\.)|(~$)|(test|txt|src|min|templates)/]
             ],
             resourceTags: {
                 amd: function (filename, mid) {
@@ -102,48 +102,51 @@ var profile = {
         }
     ],
 
-  // Build source map files to aid in debugging.
-  // This defaults to true.
+    // Build source map files to aid in debugging.
+    // This defaults to true.
     useSourceMaps: false,
 
-  // If present and truthy, instructs the loader to consume the cache of layer member modules
+    // If present and truthy, instructs the loader to consume the cache of layer member modules
     noref: true,
 
-  // Strips all calls to console functions within the code. You can also set this to "warn" to strip everything
-  // but console.error, and any other truthy value to strip everything but console.warn and console.error.
-  // This defaults to "normal" (strip all but warn and error) if not provided.
+    // Strips all calls to console functions within the code. You can also set this to "warn" to strip everything
+    // but console.error, and any other truthy value to strip everything but console.warn and console.error.
+    // This defaults to "normal" (strip all but warn and error) if not provided.
     stripConsole: 'normal', // if set to "all" will remove all console messages, include warnings and errors.
 
-  // The default selector engine is not included by default in a dojo.js build in order to make mobile builds
-  // smaller. We add it back here to avoid that extra HTTP request. There is also an "acme" selector available; if
-  // you use that, you will need to set the `selectorEngine` property in index.html, too.
+    // The default selector engine is not included by default in a dojo.js build in order to make mobile builds
+    // smaller. We add it back here to avoid that extra HTTP request. There is also an "acme" selector available; if
+    // you use that, you will need to set the `selectorEngine` property in index.html, too.
     selectorEngine: 'lite',
 
-  // Any module in an application can be converted into a "layer" module, which consists of the original module +
-  // additional dependencies built into the same file. Using layers allows applications to reduce the number of HTTP
-  // requests by combining all JavaScript into a single file.
+    // Any module in an application can be converted into a "layer" module, which consists of the original module +
+    // additional dependencies built into the same file. Using layers allows applications to reduce the number of HTTP
+    // requests by combining all JavaScript into a single file.
     layers: {
 
-    // This is the main loader module. It is a little special because it is treated like an AMD module even though
-    // it is actually just plain JavaScript. There is some extra magic in the build system specifically for this
-    // module ID.
+        // This is the main loader module. It is a little special because it is treated like an AMD module even though
+        // it is actually just plain JavaScript. There is some extra magic in the build system specifically for this
+        // module ID.
         'dojo/dojo': {
 
-      //put all styles in the build.css bundle
+            //put all styles in the build.css bundle
             targetStylesheet: 'app/css/build.css',
 
-      // By default, the build system will try to include `dojo/main` in the built `dojo/dojo` layer, which adds
-      // a bunch of stuff we do not want or need. We want the initial script load to be as small and quick to
-      // load as possible, so we configure it as a custom, bootable base.
+            // By default, the build system will try to include `dojo/main` in the built `dojo/dojo` layer, which adds
+            // a bunch of stuff we do not want or need. We want the initial script load to be as small and quick to
+            // load as possible, so we configure it as a custom, bootable base.
             boot: true,
             customBase: true,
             include: [
+            ],
 
-        // include the app, set accordingly for your application
-                'app/app',
-                'app/config/viewer',
-
-        // dependencies of esri/map that will be requested if not included
+            // You can define the locale for your application if you like
+            includeLocales: ['en-us']
+        },
+        'app/app': {
+            include: [
+                'esri/map',
+                // dependencies of esri/map that will be requested if not included
                 'dojox/gfx/path',
                 'dojox/gfx/svg',
                 'dojox/gfx/filters',
@@ -152,38 +155,75 @@ var profile = {
                 'esri/dijit/Attribution',
                 'esri/layers/VectorTileLayerImpl',
 
-        //dgrid mobile
+                //dgrid mobile
                 'dgrid/util/touch',
                 'dgrid/TouchScroll'
-            ],
+            ]
+        },
 
-      // You can define the locale for your application if you like
-            includeLocales: ['en-us']
+        'app/config/viewer': {
+            include: []
+        },
+
+        // additional layers (one for each widget)
+        'gis/dijit/LayerControl': {
+            include: [
+                'gis/dijit/LayerControl',
+                'gis/dijit/LayerControl/controls/Dynamic',
+                'gis/dijit/LayerControl/controls/Feature'
+            ]
         }
+
+
+        //
+        // //esri modules
+        // 'esri/dijit/HomeButton',
+        // 'esri/dijit/OverviewMap',
+        // 'esri/dijit/Scalebar',
+        // 'esri/SnappingManager',
+        // 'esri/dijit/editing/Editor',
+        // 'esri/layers/VectorTileLayer',
+        //
+        // //cmv widgets
+        // 'gis/dijit/Growler',
+        // 'gis/dijit/Basemaps',
+        // 'gis/dijit/Help',
+        // 'gis/dijit/Bookmarks',
+        // 'gis/dijit/Find',
+        // 'gis/dijit/Identify',
+        // 'gis/dijit/Draw',
+        // 'gis/dijit/Measurement',
+        // 'gis/dijit/Print',
+        // 'gis/dijit/Directions',
+        // 'gis/dijit/Editor',
+        // 'gis/dijit/StreetView',
+        // 'gis/dijit/LocateButton',
+        // 'gis/dijit/Locale',
+        // 'gis/dijit/Legend'
     },
 
-  // Providing hints to the build system allows code to be conditionally removed on a more granular level than simple
-  // module dependencies can allow. This is especially useful for creating tiny mobile builds. Keep in mind that dead
-  // code removal only happens in minifiers that support it! Currently, only Closure Compiler to the Dojo build system
-  // with dead code removal. A documented list of has-flags in use within the toolkit can be found at
-  // <http://dojotoolkit.org/reference-guide/dojo/has.html>.
+    // Providing hints to the build system allows code to be conditionally removed on a more granular level than simple
+    // module dependencies can allow. This is especially useful for creating tiny mobile builds. Keep in mind that dead
+    // code removal only happens in minifiers that support it! Currently, only Closure Compiler to the Dojo build system
+    // with dead code removal. A documented list of has-flags in use within the toolkit can be found at
+    // <http://dojotoolkit.org/reference-guide/dojo/has.html>.
     staticHasFeatures: {
 
-    // The trace & log APIs are used for debugging the loader, so we do not need them in the build.
+        // The trace & log APIs are used for debugging the loader, so we do not need them in the build.
         'dojo-trace-api': 0,
         'dojo-log-api': 0,
 
-    // This causes normally private loader data to be exposed for debugging. In a release build, we do not need
-    // that either.
+        // This causes normally private loader data to be exposed for debugging. In a release build, we do not need
+        // that either.
         'dojo-publish-privates': 0,
 
-    // This application is pure AMD, so get rid of the legacy loader.
+        // This application is pure AMD, so get rid of the legacy loader.
         'dojo-sync-loader': 0,
 
-    // `dojo-xhr-factory` relies on `dojo-sync-loader`, which we have removed.
+        // `dojo-xhr-factory` relies on `dojo-sync-loader`, which we have removed.
         'dojo-xhr-factory': 0,
 
-    // We are not loading tests in production, so we can get rid of some test sniffing code.
+        // We are not loading tests in production, so we can get rid of some test sniffing code.
         'dojo-test-sniff': 0,
         'extend-esri': 0,
 
@@ -226,7 +266,7 @@ var profile = {
             main: 'moment'
         }]
     },
-  //plugin required for building css
+    //plugin required for building css
     plugins: {
         'xstyle/css': 'xstyle/build/amd-css'
     }
